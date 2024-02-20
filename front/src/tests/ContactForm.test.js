@@ -1,5 +1,5 @@
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
-import ContactForm from './ContactForm';
+import ContactForm from '../components/ContactForm/ContactForm';
 
 describe('ContactForm', () => {
   it('should submit the form with user input', async () => {

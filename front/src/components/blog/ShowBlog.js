@@ -154,8 +154,8 @@
 
 // export default CompShowBlogs;
 
-import axios from 'axios';
 import { useState, useEffect, useCallback } from 'react';
+import axios from "axios";
 import { Link } from 'react-router-dom';
 
 const URI = 'http://localhost:8000/blogs/';
