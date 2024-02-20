@@ -25,12 +25,12 @@ const BlogCard = ({ blog }) => {
                     src={`http://localhost:8000/${blog.image_url}`}
                     className='card-img-top'
                     alt={blog.title}
-                    style={{ width: '100%', height: '200px', objectFit: 'contain' }} // Cambiar 'cover' a 'contain'
+                    style={{ width: '100%', height: '200px', objectFit: 'contain' }} // 
                 />
                 <div className='card-body'>
                     <h5 className='card-title'>{blog.title}</h5>
                     <p className='card-text'>{limitedContent}</p>
-                    <Link to={`/blogs/${blog.id}`} className='btn btn-primary'>Ver receta completa</Link> {/* Enlace para ver la receta completa */}
+                    <Link to={`/blogs/${blog.id}`} className='btn btn-primary'>Ver receta completa</Link> 
                 </div>
             </div>
         </div>

@@ -19,8 +19,8 @@
   
   
   .ingredient-container {
-    width: 50%; /* Ajusta el ancho del contenedor de ingredientes según tus necesidades */
-    margin: auto; /* Centra el contenedor horizontalmente */
+    width: 50%; 
+    margin: auto; 
     margin-top:3rem;
 }
 ul{

@@ -6,15 +6,6 @@ import multer from "multer";
 //*Metodos para el CRUD**/
 
 //Mostrar todos los registros
-// export const getAllBlogs = async (req, res) =>{
-//     try {
-//         const blog = await BlogModel.findAll()
-//         res.json(blog)
-
-//     } catch (error){
-//         res.json({message: error.message})
-//     }
-// }
 
 export const getAllBlogs = async (req, res) =>{
     const page = parseInt(req.query.page) || 1; // Obtén el número de página de la consulta, si no está presente, usa la página 1
@@ -36,17 +27,7 @@ export const getAllBlogs = async (req, res) =>{
 
 
 //Mostrar un registro/blog
-// export const getBlog = async (req, res)=>{
-//     try {
-//         const blog = await BlogModel.findAll({
-//             where:{ id:req.params.id }
-//         })
-//         res.json(blog[0])
 
-//     }catch (error){
-//         res.json({message: error.message})
-//     }
-// }
 export const getBlog = async (req, res) =>{
     try {
         const blog = await BlogModel.findByPk(req.params.id);
@@ -101,16 +82,16 @@ export const updateBlog = async (req, res) => {
         // Ejecuta el middleware de multer para manejar la carga de la imagen
         uploadImage(req, res, async function (err) {
             if (err instanceof multer.MulterError) {
-                // Se produce un error de Multer
+               
                 return res.status(500).json({ message: err.message });
             } else if (err) {
-                // Se produce otro tipo de error
+                
                 return res.status(500).json({ message: err.message });
             }
 
-            // Si se subió una imagen, adjunta la ruta al cuerpo de la solicitud
+           
             if (req.file) {
-                req.body.image_url = req.file.path; // Ajusta el nombre del campo de la imagen según lo que necesites
+                req.body.image_url = req.file.path; 
             }
 
             // Actualiza el blog
@@ -127,21 +108,6 @@ export const updateBlog = async (req, res) => {
     }
 };
 
-
-// export const updateBlog = async (req, res) =>{
-
-//     try {
-//         await BlogModel.update(req.body, {
-//             where: {id:req.params.id}
-//         })
-//         res.json({
-//             "message":"Registro actualizado correctamente"
-//         })
-//     } catch (error){
-//         res.json({message: error.message})
-
-//     }
-// }
 
 
 //eliminar un blog

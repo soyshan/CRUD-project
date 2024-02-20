@@ -15,19 +15,3 @@ const upload = multer({ storage:storage});
 export const uploadImage = upload.single('image_url');
 
 
-
-
-
-// import multer from "multer";
-
-
-// const multer = require('multer');
-
-// const upload = multer({ dest: 'uploads/' });
-
-// const app = express()
-
-// add.post('/images/single',upload.single,(req,res)=>{
-//     console.log(req.file);
-// res.send('Termino la subida');
-// });
