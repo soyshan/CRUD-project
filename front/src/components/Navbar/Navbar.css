@@ -1,0 +1,70 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #FFEEDB;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  color: #FF6347; /* Cambiar color al hacer hover */
+}
+
+.user-icon {
+ width: 5px;
+}
+
+.nav-toggle {
+  display: none; /* Ocultar el icono de hamburguesa por defecto */
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* Mostrar el icono de hamburguesa en dispositivos móviles */
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none; /* Ocultar los enlaces por defecto en dispositivos móviles */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFD8CC;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1;
+  }
+
+  .nav-links.open {
+    display: flex; /* Mostrar los enlaces cuando el menú está abierto */
+  }
+}

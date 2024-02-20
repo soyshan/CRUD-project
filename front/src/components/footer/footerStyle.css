@@ -1,0 +1,44 @@
+footer {
+    background-color: #FFEEDB;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top:5rem;
+  }
+  
+  .footer-column {
+    width: 30%; /* Ancho de cada columna */
+    margin-top:2rem;
+  }
+  
+  .footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .footer-column p {
+    margin: 0;
+    font-size: 1rem;
+    color: #000000;
+  }
+  
+  .footer-column form {
+    margin-top: 20px;
+  }
+  
+  .footer-column input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column button {
+    padding: 8px 20px;
+    background-color: #FFBD9B;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius:2rem ;
+  }
+  
