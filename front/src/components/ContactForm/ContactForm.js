@@ -21,9 +21,6 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar tu lógica para enviar el formulario, como enviar una solicitud HTTP
-
-    // Después de enviar el formulario, cambia submitted a true
     setSubmitted(true);
   };
 

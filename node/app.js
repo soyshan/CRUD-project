@@ -4,16 +4,23 @@ import cors from 'cors'
 import db from "./database/db.js"
 //importamos el enrutador
 import blogRoutes from './routes/routes.js'
+import path from 'path'
 
 
 
-
+const __dirname = path.resolve();
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
 app.use('/blogs', blogRoutes)
+
+
+app.use(express.static(path.join(__dirname,'/front/dist')));
+
+app.get('*',(req,res)=>{res.sendFile(path.join(__dirname, 'front', 'dist', 'index.html'))});
+
 
 // app.post('/upload', uploadImage, (req, res) => {
  
