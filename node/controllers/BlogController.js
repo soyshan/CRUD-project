@@ -8,7 +8,7 @@ import multer from "multer";
 //Mostrar todos los registros
 
 export const getAllBlogs = async (req, res) =>{
-    const page = parseInt(req.query.page) || 1; // Obtén el número de página de la consulta, si no está presente, usa la página 1
+    const page = parseInt(req.query.page) || 1; // para obtener el número de página de la consulta, si no está presente, usa la página 1
     const perPage = 6; // Número de blogs por página
 
     try {

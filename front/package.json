@@ -44,6 +44,13 @@
   },
   "globals": {
     "esModules": true
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "devDependencies": {
+    "babel-jest": "^29.7.0"
   }
-
 }

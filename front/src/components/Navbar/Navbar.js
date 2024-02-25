@@ -18,9 +18,9 @@ const Navbar = () => {
           <p>Recetas Asiáticas</p>
         </Link>
         <div className='nav-toggle' onClick={toggleNav}>
-          <i className='fas fa-bars'></i>
+        <i className='fas fa-bars' data-testid='menu-icon'></i>
         </div>
-        <ul className={`nav-links ${isNavOpen ? 'open' : ''}`}>
+        <ul className={`nav-links ${isNavOpen ? 'open' : ''}`} data-testid="nav-links">
           <li>
             <Link to='/' className='nav-link'>Inicio</Link>
           </li>

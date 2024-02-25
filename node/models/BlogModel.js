@@ -3,7 +3,7 @@ import db from "../database/db.js"
 //importamos sequelize
 import {DataTypes} from "sequelize";
 
-//definimos nuestra conexión, y usamos el nombre de la tabla:blogs
+//definimos nuestra conexión, y usamos el nombre de la tabla: recetas
 const BlogModel = db.define('recetas',{
     title: { type: DataTypes.STRING},
     content: { type: DataTypes.STRING},
@@ -12,5 +12,5 @@ const BlogModel = db.define('recetas',{
 
 })
 
-
+                    
 export default BlogModel
