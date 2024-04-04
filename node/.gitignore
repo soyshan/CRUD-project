@@ -1,0 +1,16 @@
+# Excluir directorio node_modules
+node_modules/
+
+# Excluir archivos de configuración sensibles
+.env
+config.json
+
+# Excluir archivos generados
+dist/
+build/
+coverage/
+
+# Excluir archivos de respaldo y temporales
+*.log
+*.tmp
+*.bak
