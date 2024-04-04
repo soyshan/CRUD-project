@@ -14,7 +14,12 @@ export const createUser = async (req, res) => {
     try {
         const { username, email, password } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = await UsersModel.create({ username, email, password: hashedPassword });
+        const newUser = await UsersModel.create({ 
+            username, 
+            email, 
+            password: hashedPassword,
+            is_admin: false // Asegúrate de establecer el valor predeterminado para is_admin si es necesario
+        });
         return res.status(201).json(newUser);
     } catch (error) {
         return res.status(500).json({ error: 'Error al crear usuario' });

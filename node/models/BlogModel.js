@@ -11,6 +11,8 @@ const BlogModel = db.define('recetas',{
     image_url: { type: DataTypes.STRING } 
 
 })
+
+
 // Establecer la relación entre la tabla de recetas  y la de usuarios
 BlogModel.belongsTo(UsersModel, { foreignKey: 'user_id' });
 
