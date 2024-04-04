@@ -5,6 +5,7 @@ import { render, fireEvent, screen } from '@testing-library/react';
 import Navbar from '../components/Navbar/Navbar.js';
 
 describe('Navbar component', () => {
+
   it('should toggle nav menu when menu icon is clicked', () => {
     render(
       <Router>
@@ -25,3 +26,5 @@ describe('Navbar component', () => {
     expect(navLinks).not.toHaveClass('open');
   });
 });
+
+//para testear que funciona bien el menu desplegable.

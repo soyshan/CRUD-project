@@ -43,9 +43,9 @@ const CompCreateBlog = () => {
           };
           
     return (
-        <div>
+        <div >
             <h3>
-           crear post
+           Crear post
             </h3>
             <form onSubmit={store}>
             <div className= 'mb-3'>

@@ -2,6 +2,7 @@ footer {
     background-color: #FFEEDB;
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top:5rem;
   }
@@ -42,3 +43,8 @@ footer {
     border-radius:2rem ;
   }
   
+  @media only screen and (max-width: 768px) {
+    .footer-column {
+      width: 100%; 
+    }
+  }
