@@ -1,6 +1,5 @@
 //importamos la conexion a la base de datos
 import db from "../database/db.js"
-//importamos sequelize
 import {DataTypes} from "sequelize";
 import UsersModel from "./UsersModel.js";
 //definimos nuestra conexión, y usamos el nombre de la tabla: recetas
